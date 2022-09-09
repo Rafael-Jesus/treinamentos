@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import api from "../config/configAPI";
-import "../style/ModalEdita.css";
+import api from "../../config/configAPI";
+import "../../style/ModalEdita.css";
 
 function ModalEdita(props) {
   const [nameTreinamento, setNameTreinamento] = useState(

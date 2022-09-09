@@ -2,7 +2,7 @@ import React, { useState}from "react";
 import { BsFillFileEarmarkPdfFill } from "react-icons/bs";
 import { BsTrashFill } from "react-icons/bs";
 import { AiFillEdit } from "react-icons/ai";
-import ModalConfirma from "../components/ModalConfirma.js";
+import ModalConfirma from "./Treinamentos/ModalConfirma.js";
 
 function Card(props) {
   const [nameModal, setNameModal] = useState('#modalConfirma');

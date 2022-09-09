@@ -1,6 +1,6 @@
 import React, {useState}from "react";
-import api from "../config/configAPI";
-import "../style/ModalConfirma.css";
+import api from "../../config/configAPI";
+import "../../style/ModalConfirma.css";
 
 function ModalConfirma(props) {
   const deleteFile = async (id) => {

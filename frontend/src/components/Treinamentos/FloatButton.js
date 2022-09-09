@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../style/FloatButton.css";
-import api from "../config/configAPI";
+import "../../style/FloatButton.css";
+import api from "../../config/configAPI";
 import { MdCloudUpload } from "react-icons/md";
 import { AiFillFilePdf } from "react-icons/ai";
 

@@ -5,7 +5,9 @@ import { MdCloudUpload } from "react-icons/md";
 import { AiFillFilePdf } from "react-icons/ai";
 
 function FloatButton(props) {
-  const [nameTreinamento, setNameTreinamento] = useState("");
+  const [nameUsuario, setNameUsuario] = useState("");
+  const [passUsuario, setPassUsuario] = useState("");
+  const [loginUsuario, setLoginUsuario] = useState("");
   const [setor, setSetor] = useState("");
   const [file, setFile] = useState("");
   const [status, setStatus] = useState({
@@ -17,11 +19,13 @@ function FloatButton(props) {
     e.preventDefault();
     const formData = new FormData();
     formData.append("file", file);
-    formData.append("nameTreinamento", nameTreinamento);
+    formData.append("nameUsuario", nameUsuario);
     formData.append("setor", setor);
+    formData.append("loginUsuario", loginUsuario);
+    formData.append("passUsuario", passUsuario);
 
     await api
-      .post("/upload-file",formData)
+      .post("/add-user", formData)
       .then((res) => {
         setStatus({
           type: "success",
@@ -51,14 +55,24 @@ function FloatButton(props) {
 
   return (
     <>
-      <div id="modalCadastroTreino" className="modal">
+      <div id="modalCadastroUsuario" className="modal">
         <div className="modal-content">
-          <h1>Cadastro de Treinamento</h1>
+          <h1>Cadastro de Usuário</h1>
 
           <input
             className="inputAdd"
-            placeholder="Nome do treinamento..."
-            onChange={(e) => setNameTreinamento(e.target.value)}
+            placeholder="Entre com o nome..."
+            onChange={(e) => setNameUsuario(e.target.value)}
+          />
+          <input
+            className="inputAdd"
+            placeholder="Entre com o login/e-mail..."
+            onChange={(e) => setLoginUsuario(e.target.value)}
+          />
+          <input
+            className="inputAdd"
+            placeholder="Entre com a senha..."
+            onChange={(e) => setPassUsuario(e.target.value)}
           />
 
           <select
@@ -97,7 +111,7 @@ function FloatButton(props) {
           <label htmlFor="uploadFile">
             {" "}
             <MdCloudUpload size={30} />
-            &nbsp;Selecione o Arquivo
+            &nbsp;Foto de Perfil
           </label>
 
           <button className="button" type="button" onClick={uploadFile}>
@@ -110,7 +124,7 @@ function FloatButton(props) {
         </div>
       </div>
 
-      <a href="#modalCadastroTreino" className="btn-floating">
+      <a href="#modalCadastroUsuario" className="btn-floating">
         <h1 className="add">+</h1>
       </a>
     </>

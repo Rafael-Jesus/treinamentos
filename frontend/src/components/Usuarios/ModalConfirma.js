@@ -5,8 +5,8 @@ import "../../style/ModalConfirma.css";
 function ModalConfirma(props) {
   const deleteFile = async (id) => {
     const formData = new FormData();
-    formData.append("idTreinamento", id);
-    const result = await api.post(`/delete-file?idTreinamento=${id}`);
+    formData.append("idUser", id);
+    const result = await api.post(`/delete-user?idUser=${id}`);
     window.location.href = "#";
   };
 

@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useCallback } from "react";
 import api from "../config/configAPI";
 
-import Card from "../components/Card.js";
+import Card from "../components/Treinamentos/Card.js";
 import FloatButton from "../components/Treinamentos/FloatButton.js";
-import "../style/Card.css";
+
 
 import ModalConfirma from "../components/Treinamentos/ModalConfirma";
 import ModalEdita from "../components/Treinamentos/ModalEdita";

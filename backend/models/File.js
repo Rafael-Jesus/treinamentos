@@ -20,6 +20,6 @@ const File = db.define('files', {
 });
 
 //Criar a tabela
-File.sync();
+// File.sync();
 
 module.exports = File;

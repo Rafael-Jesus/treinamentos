@@ -20,9 +20,12 @@ const Users = db.define('users', {
     senha: {
         type: Sequelize.STRING
     },
+    file: {
+        type: Sequelize.STRING
+    },
 });
 
 //Criar a tabela
-Users.sync();
+// Users.sync();
 
 module.exports = Users;

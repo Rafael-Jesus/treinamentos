@@ -4,7 +4,6 @@ import api from "../config/configAPI";
 import Card from "../components/Treinamentos/Card.js";
 import FloatButton from "../components/Treinamentos/FloatButton.js";
 
-
 import ModalConfirma from "../components/Treinamentos/ModalConfirma";
 import ModalEdita from "../components/Treinamentos/ModalEdita";
 

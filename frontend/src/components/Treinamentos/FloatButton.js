@@ -3,7 +3,7 @@ import "../../style/FloatButton.css";
 import api from "../../config/configAPI";
 import { MdCloudUpload } from "react-icons/md";
 import { AiFillFilePdf } from "react-icons/ai";
-
+import { GrFormAdd } from "react-icons/gr";
 function FloatButton(props) {
   const [nameTreinamento, setNameTreinamento] = useState("");
   const [setor, setSetor] = useState("");
@@ -21,7 +21,7 @@ function FloatButton(props) {
     formData.append("setor", setor);
 
     await api
-      .post("/upload-file",formData)
+      .post("/upload-file", formData)
       .then((res) => {
         setStatus({
           type: "success",
@@ -111,7 +111,7 @@ function FloatButton(props) {
       </div>
 
       <a href="#modalCadastroTreino" className="btn-floating">
-        <h1 className="add">+</h1>
+        <GrFormAdd size={55} style={{fill: 'white'}}/>
       </a>
     </>
   );

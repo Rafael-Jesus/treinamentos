@@ -3,6 +3,7 @@ import "../../style/FloatButton.css";
 import api from "../../config/configAPI";
 import { MdCloudUpload } from "react-icons/md";
 import { AiFillFilePdf } from "react-icons/ai";
+import { GrFormAdd } from "react-icons/gr";
 
 function FloatButton(props) {
   const [nameUsuario, setNameUsuario] = useState("");
@@ -125,7 +126,7 @@ function FloatButton(props) {
       </div>
 
       <a href="#modalCadastroUsuario" className="btn-floating">
-        <h1 className="add">+</h1>
+        <GrFormAdd size={55}/>
       </a>
     </>
   );

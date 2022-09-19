@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import Usuarios from "./pages/Usuarios";
 import Treinamentos from "./pages/Treinamentos";
 import Perfil from "./pages/Perfil";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -14,11 +15,13 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" exact element={<Dashboard/>}></Route>
+          <Route path="/" exact element={<Dashboard />}></Route>
           {/* <Route path="/contactus" component={Contactus}></Route> */}
-          <Route path="/usuarios" element={<Usuarios/>}></Route>
-          <Route path="/treinamentos" element={<Treinamentos/>}></Route>
-          <Route path="/perfil" element={<Perfil/>}></Route>
+          <Route path="/usuarios" element={<Usuarios />}></Route>
+          <Route path="/treinamentos" element={<Treinamentos />}></Route>
+          <Route path="/perfil" element={<Perfil />}></Route>
+
+          <Route path="/login" element={<Login />}></Route>
         </Routes>
       </Router>
     </>
